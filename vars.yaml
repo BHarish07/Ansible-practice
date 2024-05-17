@@ -1,8 +1,8 @@
 - name: variables 
   hosts: localhost
-  # vars_files: 
+  # vars_files:  #variable file 
   # - vars_file.yaml 
-  # vars_prompt:
+  # vars_prompt: #prompt level 
   # - name: Course
   #   prompt: Enter your course name
   #   private: false
@@ -12,13 +12,22 @@
   # - name: Duration
   #   prompt: Enter Duration of the courseDuration
   #   private: false
-  # vars:
+  # vars: #Play level 
   #  Course: Devops with AWS
   #  Trainer: Shiva
   #  Duration: 120hrs
   tasks:
   - name: Devops course details 
-    # vars:
+    # vars: #task level 
     #   Course: Devops
     ansible.builtin.debug:
       msg: "Course: {{Course}}, Trainer:{{Trainer}}, Duration: {{Duration}}" 
+
+#variable preference
+#1.argument level 
+#2.task level
+#3.variable file 
+#4.prompt 
+#5.play level
+#6.Inventory 
+#7. Role level
