@@ -1,9 +1,12 @@
 - name: variables 
   hosts: localhost
-  vars:
-   Course: Devops with AWS
-   Trainer: Shiva
-   Duration: 120hrs
+  vars_files:
+   vars.yaml
+     
+  # vars:
+  #  Course: Devops with AWS
+  #  Trainer: Shiva
+  #  Duration: 120hrs
   tasks:
   - name: Devops course details 
     ansible.builtin.debug:
