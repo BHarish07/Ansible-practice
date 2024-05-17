@@ -2,16 +2,16 @@
   hosts: localhost
   # vars_files: 
   # - vars_file.yaml 
-  vars_prompt:
-  - name: Course
-    prompt: Enter your course name
-    private: false
-  - name: Trainer
-    prompt: Enter Trainer name
-    private: true
-  - name: Duration
-    prompt: Enter Duration of the courseDuration
-    private: false
+  # vars_prompt:
+  # - name: Course
+  #   prompt: Enter your course name
+  #   private: false
+  # - name: Trainer
+  #   prompt: Enter Trainer name
+  #   private: true
+  # - name: Duration
+  #   prompt: Enter Duration of the courseDuration
+  #   private: false
   # vars:
   #  Course: Devops with AWS
   #  Trainer: Shiva
