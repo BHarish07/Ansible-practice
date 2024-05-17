@@ -9,8 +9,8 @@
   - name: Trainer
     prompt: Enter Trainer name
     private: true
-  - name: Enter Duration of the course
-    prompt: Duration
+  - name: Duration
+    prompt: Enter Duration of the courseDuration
     private: false
   # vars:
   #  Course: Devops with AWS
