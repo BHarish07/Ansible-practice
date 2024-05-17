@@ -1,7 +1,7 @@
 - name: variables 
   hosts: localhost
   vars_files: 
-  - vars.yaml 
+  - vars_file.yaml 
      
   # vars:
   #  Course: Devops with AWS
