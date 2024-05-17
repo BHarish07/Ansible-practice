@@ -5,10 +5,13 @@
   vars_prompt:
   - name: Course
     prompt: Enter your course name
+    private: false
   - name: Trainer
     prompt: Enter Trainer name
+    private: true
   - name: Enter Duration of the course
     prompt: Duration
+    private: false
   # vars:
   #  Course: Devops with AWS
   #  Trainer: Shiva
