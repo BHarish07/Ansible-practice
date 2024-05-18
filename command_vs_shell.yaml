@@ -4,5 +4,5 @@
   - name: command module
     ansible.builtin.command: " echo 'Hello, good morning' > /etc/file1.txt"
 
-  # - name: shell module
-  #   ansible.builtin.shell: " echo 'Hello, good morning from shell' > /etc/file.txt"
+  - name: shell module
+    ansible.builtin.shell: " sudo echo 'Hello, good morning from shell' > /etc/file.txt"
