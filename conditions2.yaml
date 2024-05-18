@@ -2,6 +2,7 @@
   hosts: web
   vars:
     greetings: "Hello good morning"
+    ages: [12, 25, 65, 44, 25, 65,33]
   tasks:
   - name: default value 
     ansible.builtin.debug:
@@ -9,3 +10,9 @@
   - name: Upper case
     ansible.builtin.debug: 
       msg: " {{greetings | upper }}"
+  - name: Lower case
+    ansible.builtin.debug:
+      msg: " {{greetings | lower }}"
+  - name: unique values
+    ansible.builtin.debug:
+      msg: "Hi, ages listed are : {{ages | unique}}"
