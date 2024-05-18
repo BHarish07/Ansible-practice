@@ -40,6 +40,9 @@
   - name: list to dictionary
     ansible.builtin.debug:
      msg: "List to dictionary:{{ my_list | items2dict }}"
+  - name: dictionary output to list 
+    ansible.builtin.debug:
+     msg: "List to dictionary:{{ items_list_output.key | items2dict }}"
 
 
     
