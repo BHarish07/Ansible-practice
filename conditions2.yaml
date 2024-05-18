@@ -27,9 +27,14 @@
 
   - name: dictionary to list 
     ansible.builtin.debug: 
-     msg: "Before converstion"
-  - name:
+     msg: "Before converstion: {{my_dict}}"
+  - name: dictionary to list 
     ansible.builtin.debug:
      msg: "After convertion: {{my_dict | dict2items}}"
+    register: items_list
+  - name: list to dictionary
+    ansible.builtin.debug:
+     msg: "List to dictionary:{{ items_list | items2dict }}"
+     
 
     
