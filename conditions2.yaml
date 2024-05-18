@@ -8,6 +8,11 @@
       Course: Devops with AWS
       Trainer: Shiva
       Duration: 120hrs
+    my_list:
+    - {'key': 'Name', 'value': 'Harish'}
+    - {'key': 'Course', 'value': 'Devops with AWS'}
+    - {'key': 'Trainer', 'value': 'Shiva'}
+    - {'key': 'Duration', 'value': '120hrs'}
   tasks:
   - name: default value 
     ansible.builtin.debug:
@@ -31,10 +36,10 @@
   - name: dictionary to list 
     ansible.builtin.debug:
      msg: "After convertion: {{my_dict | dict2items}}"
-    register: items_list
+    register: items_list_output
   - name: list to dictionary
     ansible.builtin.debug:
-     msg: "List to dictionary:{{ items_list | items2dict }}"
-     
+     msg: "List to dictionary:{{ my_list | items2dict }}"
+
 
     
