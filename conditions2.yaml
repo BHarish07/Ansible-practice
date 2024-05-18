@@ -3,6 +3,11 @@
   vars:
     greetings: "Hello good morning"
     ages: [12, 25, 65, 44, 25, 65,33]
+    my_dict:
+      Name: Harish
+      Course: Devops with AWS
+      Trainer: Shiva
+      Duration: 120hrs
   tasks:
   - name: default value 
     ansible.builtin.debug:
@@ -16,3 +21,15 @@
   - name: unique values
     ansible.builtin.debug:
       msg: "Hi, ages listed are : {{ages | unique}}"
+  - name: min and max
+    ansibile.builtin.debug:
+     msg: "Min age is : {{ ages | min }},  Max age is : {{ ages | max }}"
+
+  - name: dictionary to list 
+    ansible.builtin.debug: 
+     msg: "Before converstion"
+  - name:
+    ansible.builtin.debug:
+     msg: "After convertion: {{my_dict | dict2items}}"
+     
+    
