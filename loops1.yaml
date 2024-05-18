@@ -16,8 +16,9 @@
   become: yes
   tasks: 
    - name: installing mysql, postfix and nginx in ansible worker node
-     ansible.builtin.debug:
-       msg:"Installing {{items}}"
+  #    ansible.builtin.debug:
+  #      msg:"Installing {{items}}"
+  #  - name:
      ansible.builtin.command: sudo dnf install {{items}} -y  
      loop:
      - mysql
