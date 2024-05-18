@@ -20,7 +20,7 @@
   #      msg:"Installing {{items}}"
   #  - name:
      ansible.builtin.dnf: 
-       name: "{{items}}"
+       name: "{{item}}"
        state: latest
         
      loop:
