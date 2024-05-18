@@ -19,7 +19,10 @@
   #    ansible.builtin.debug:
   #      msg:"Installing {{items}}"
   #  - name:
-     ansible.builtin.command: sudo dnf install {{items}} -y  
+     ansible.builtin.dnf: 
+     - name: "{{items}}"
+       state: latest
+        
      loop:
      - mysql
      - postfix
