@@ -5,4 +5,4 @@
     ansible.builtin.command: " echo 'Hello, good morning' > /etc/file1.txt"
 
   - name: shell module
-    ansible.builtin.shell: " echo 'Hello, good morning from shell' > /etc/file2.txt"
+    ansible.builtin.shell: " echo 'Hello, good morning from shell' > /etc/file.txt"
