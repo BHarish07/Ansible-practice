@@ -15,9 +15,9 @@
   hosts: web
   become: yes
   tasks: 
-   - name: installing
+   - name: " installing {{item}}"
   #    ansible.builtin.debug:
-  #      msg:"Installing {{items}}"
+  #      msg:"Installing {{item}}"
   #  - name:
      ansible.builtin.dnf: 
        name: "{{item}}"
