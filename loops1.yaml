@@ -15,12 +15,12 @@
   hosts: web
   become: yes
   tasks: 
-   - name: installing mysql, postfix and nginx in ansible worker node
+   - name: installing
   #    ansible.builtin.debug:
   #      msg:"Installing {{items}}"
   #  - name:
      ansible.builtin.dnf: 
-     - name: "{{items}}"
+       name: "{{items}}"
        state: latest
         
      loop:
