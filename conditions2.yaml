@@ -22,7 +22,7 @@
     ansible.builtin.debug:
       msg: "Hi, ages listed are : {{ages | unique}}"
   - name: min and max
-    ansibile.builtin.debug:
+    ansible.builtin.debug:
      msg: "Min age is : {{ ages | min }},  Max age is : {{ ages | max }}"
 
   - name: dictionary to list 
@@ -31,5 +31,5 @@
   - name:
     ansible.builtin.debug:
      msg: "After convertion: {{my_dict | dict2items}}"
-     
+
     
