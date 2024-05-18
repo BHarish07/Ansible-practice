@@ -11,19 +11,32 @@
 
 
 
-- name: Loops2
-  hosts: web
-  become: yes
-  tasks: 
-   - name: installing
-  #    ansible.builtin.debug:
-  #      msg:"Installing {{item}}"
-  #  - name:
-     ansible.builtin.dnf: 
-       name: "{{item}}"
-       state: latest
+# - name: Loops2
+#   hosts: web
+#   become: yes
+#   tasks: 
+#    - name: installing
+#   #    ansible.builtin.debug:
+#   #      msg:"Installing {{item}}"
+#   #  - name:
+#      ansible.builtin.dnf: 
+#        name: "{{item}}"
+#        state: latest
         
-     loop:
-     - mysql
-     - postfix
-     - nginx
+#      loop:
+#      - mysql
+#      - postfix
+#      - nginx
+
+
+- name: installing packages in a loop advanced
+  hosts: web
+  tasks:
+  - name: installing and deleting packages 
+    ansible.builtin.package:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+    - { name: 'nginx', state: "installed"}
+    - { name: 'mysql', state: "latest"}
+    - { name: 'postfix', state: "absent"}
