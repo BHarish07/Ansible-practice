@@ -1,6 +1,6 @@
 - name: command vs shell
   hosts: localhost
-  tasks::
+  tasks:
   - name: command module
     ansible.builtin.command: " echo 'Hello, good morning' > /etc/file1.txt"
 
