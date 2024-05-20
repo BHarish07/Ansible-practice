@@ -31,8 +31,8 @@
       msg : "Output: {{ mysql_userinfo_output }}"
 
   - name: set up root password 
-    ansible.builtin.command: "mysql_secure_installation --set-root-pass ExpenseApp@1"
+    ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1
     
-
+  
 
     
