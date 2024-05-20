@@ -18,10 +18,9 @@
 #    - name: installing
 #   #    ansible.builtin.debug:
 #   #      msg:"Installing {{item}}"
-#   #  - name:
-#      ansible.builtin.dnf: 
-#        name: "{{item}}"
-#        state: latest
+#        ansible.builtin.dnf: 
+#          name: "{{item}}"
+#          state: latest
         
 #      loop:
 #      - mysql
