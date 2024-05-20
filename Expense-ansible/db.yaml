@@ -8,7 +8,7 @@
       state: latest
   - name: starting and enabling mysql server
     ansible.builtin.service:
-      name: mysql-server
+      name: mysqld
       state: started
       enabled: yes
   - name: installing dependencies
