@@ -2,7 +2,7 @@
   become: yes
   hosts: backend
   vars:
-    login_host: 172.31.29.16
+    login_host: ec2-18-212-235-211.compute-1.amazonaws.com
     login_password: ExpenseApp@1
   tasks:
   - name: disable default nodejs
