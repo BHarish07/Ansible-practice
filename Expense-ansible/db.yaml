@@ -1,0 +1,38 @@
+- name: MySQL
+  hosts: db
+  become: yes
+  tasks:
+  - name: installing mysql server
+    ansible.builtin.dnf:
+      name: mysql-server
+      state: latest
+  - name: starting and enabling mysql server
+    ansible.builtin.service:
+      name: mysql-server
+      state: started
+      enabled: yes
+  - name: installing dependencies
+    ansible.builtin.pip:
+      name: 
+      - PyMySQL
+      - cryptography
+    executable: pip3.9
+
+  - name: check db connection 
+    community.mysql.mysql_info:
+      login_host: 172.31.27.70
+      login_password: ExpanseApp@1
+      login_user: root
+      filter: version 
+    ignore_errors: yes
+    register: mysql_userinfo_output
+  - name: print output
+    ansible.builtin.debug:
+      msg : "Output: {{ mysql_userinfo_output }}"
+
+  - name: set up root password 
+    ansible.builtin.command: "mysql_secure_installation --set-root-pass ExpenseApp@1"
+    
+
+
+    
