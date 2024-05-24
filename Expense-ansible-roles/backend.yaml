@@ -1,0 +1,6 @@
+- name: configuring backend
+  hosts: backend
+  vars_file:
+  - credentials.yaml
+  roles:
+  - backend

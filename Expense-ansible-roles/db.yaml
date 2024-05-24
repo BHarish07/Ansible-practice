@@ -1,0 +1,9 @@
+- name: configuring DB
+  hosts: db 
+  vars_files:
+  - credentials.yaml
+  become: yes
+  roles:
+  - db 
+
+

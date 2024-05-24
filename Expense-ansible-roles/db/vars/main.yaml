@@ -1,0 +1,2 @@
+login_host: DB_IPaddress
+mysql_root_password: ExpenseApp@1

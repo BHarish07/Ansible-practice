@@ -1,0 +1,6 @@
+- name: configuring frontend
+  hosts: frontend
+  vars_files:
+  - credentials.yaml
+  roles:
+  - frontend

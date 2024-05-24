@@ -2,7 +2,7 @@
   become: yes
   hosts: backend
   vars:
-    login_host: 172.31.25.192:3306
+    login_host: db.harishbalike.online
     login_password: ExpenseApp@1
   tasks:
   - name: disable default nodejs
@@ -11,7 +11,7 @@
   - name: enable nodejs:20
     ansible.builtin.command: dnf module enable nodejs:20 -y
 
-  - name: install nodejs
+  - name: install nodejs and mysql
     ansible.builtin.dnf: # only works for Redhat family
       name: "{{ item }}"
       state: installed
@@ -72,7 +72,7 @@
   - name: start and enable backend service
     ansible.builtin.service:
       name: backend
-      state: started
+      state: restarted
       enabled: yes
 
       
